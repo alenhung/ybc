@@ -1,14 +1,16 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="{{ app()->getLocale() }}">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta content="width=device-width,initial-scale=1" name="viewport" />
-    <title>@yield('title', '沒有填入用這個字串')- 員邦建設</title>
+    {{-- <meta content="width=device-width,initial-scale=1" name="viewport" /> --}}
+    <title>{{ config('app.name', 'Laravel') }}</title>
     <meta name="keyword" content="給搜尋網頁的關鍵字">
     <meta name="description" content="員邦建設公司的敘述">
     <meta name="author" content="員邦建設">
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     {{-- MOBILE FIRST --}}
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0,user-scalable=no">
     <link rel="icon" href="{{ asset ('img/favicon.ico') }}" type="image/x-icon" />

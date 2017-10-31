@@ -16,3 +16,7 @@ Route::get('/about', 'StaticPagesController@about')->name('about');
 Route::get('/works', 'WorksPagesController@works')->name('works');
 Route::get('/works_Introduction', 'WorksPagesController@itemIntroduction')->name('itemIntroduction');
 Route::get('/contact', 'ServicePagesController@contact')->name('contact');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
