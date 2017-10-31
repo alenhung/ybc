@@ -24,7 +24,7 @@
       </div>
       <div class="introContentBlock col-lg-3 col-md-3 col-sm-6 col-xs-6" data-aos="fade-up">
         <img src="./img/image3.jpg" class="img-circle center-block introContentImage" alt="Responsive image" width="120" height="120">
-        <h4>建築工藝</h4>
+        <h4>在建工程</h4>
         <hr class="introContentHr">
         <p class="hidden-xs">母是行神重花，園以。</p>
       </div>
