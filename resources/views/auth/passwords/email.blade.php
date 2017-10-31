@@ -1,5 +1,5 @@
-@extends('layouts.app')
-
+@extends('layouts.adminTemplate')
+@include('layouts._adminNav')
 @section('content')
 <div class="container">
     <div class="row">

@@ -19,4 +19,4 @@ Route::get('/contact', 'ServicePagesController@contact')->name('contact');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/Site_Admin', 'SiteAdminController@SiteAdmin')->name('SiteAdmin');

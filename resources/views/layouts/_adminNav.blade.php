@@ -1,6 +1,4 @@
-
-<!-- Static navbar -->
-    <nav class="navbar navbar-default navbar-fixed-top">
+<nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -9,17 +7,13 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="{{ route('home') }}"><img src="./img/companyLogo.png" alt="{{ config('app.name', 'Laravel') }}"></a>
+          <a class="navbar-brand" href="#">{{ config('app.name', 'Laravel') }} - 網站管理端</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li><a href="{{ route('about') }}">公司簡介</a></li>
-            {{-- <li><a href="#">建築工藝</a></li> 2017/10/31 移除--}}
-            <li><a href="{{ route('works') }}">作品介紹</a></li>
-            <li><a href="#">在建工程</a></li>
-            <li><a href="#">都市更新</a></li>
-            <li><a href="{{ route('contact') }}">客戶服務</a></li>
-            <!--
+            <li class="active"><a href="#">管理介面</a></li>
+            <li><a href="#about">工程作品</a></li>
+            <li><a href="#contact">在建工程</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
               <ul class="dropdown-menu">
@@ -32,13 +26,11 @@
                 <li><a href="#">One more separated link</a></li>
               </ul>
             </li>
-          -->
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">關係企業</a></li>
-            <li><a href="#">人才招募</a></li>
-            <!-- <li class="active"><a href="#">Static top <span class="sr-only">(current)</span></a></li> -->
-
+            <li><a href="../navbar/">Default</a></li>
+            <li><a href="../navbar-static-top/">Static top</a></li>
+            <li class="active"><a href="./">Fixed top <span class="sr-only">(current)</span></a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
