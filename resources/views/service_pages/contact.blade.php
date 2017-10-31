@@ -1,7 +1,7 @@
 @extends('layouts.default')
 @section('title','公司簡介')
 @section('content')
-  <section id="contentHeader" style="background: url('./img/serviceBackground.jpg')">
+  <section id="contentHeader" style="background: url({{ asset ('img/serviceBackground.jpg') }})">
     @include('layouts._nav')
     <div class="container">
       <div class="row">

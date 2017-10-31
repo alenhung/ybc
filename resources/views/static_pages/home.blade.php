@@ -1,35 +1,35 @@
 @extends('layouts.default')
 @section('title','網站首頁')
 @section('content')
-  <header id="homeHeader" style="background-image: url('./img/style2-1.jpg')">
+  <header id="homeHeader" style="background-image: url({{ asset ('img/style2-1.jpg') }})">
     @include('layouts._nav')
-    <img src="./img/intro-2-L-G.png" class="headerImage img-responsive center-block visible-lg visible-md" alt="" data-aos="zoom-in">
-     <img src="./img/intro-2-S-G.png" class="headerImage img-responsive center-block visible-sm visible-xs" alt="" data-aos="zoom-in">
+    <img src="{{ asset ('img/intro-2-L-G.png') }}" class="headerImage img-responsive center-block visible-lg visible-md" alt="" data-aos="zoom-in">
+    <img src="{{ asset ('img/intro-2-S-G.png') }}" class="headerImage img-responsive center-block visible-sm visible-xs" alt="" data-aos="zoom-in">
   </header>
 {{-- intro Area --}}
 <section id="introContent">
   <div class="container">
     <div class="row">
       <div class="introContentBlock col-lg-3 col-md-3 col-sm-6 col-xs-6" data-aos="fade-up">
-        <img src="./img/image1.jpg" class="img-circle center-block  introContentImage" alt="Responsive image" width="120" height="120">
+        <img src="{{ asset ('img/image1.jpg')}}" class="img-circle center-block  introContentImage" alt="Responsive image" width="120" height="120">
         <h4>員邦歷程</h4>
         <hr class="introContentHr">
         <p class="hidden-xs">母是行神重花，園以。</p>
       </div>
       <div class="introContentBlock col-lg-3 col-md-3 col-sm-6 col-xs-6" data-aos="fade-up">
-        <img src="./img/image2.jpg" class="img-circle center-block introContentImage" alt="Responsive image" width="120" height="120">
+        <img src="{{ asset ('img/image2.jpg')}}" class="img-circle center-block introContentImage" alt="Responsive image" width="120" height="120">
         <h4>專業團隊</h4>
         <hr class="introContentHr">
         <p class="hidden-xs">母是行神重花，園以。</p>
       </div>
       <div class="introContentBlock col-lg-3 col-md-3 col-sm-6 col-xs-6" data-aos="fade-up">
-        <img src="./img/image3.jpg" class="img-circle center-block introContentImage" alt="Responsive image" width="120" height="120">
+        <img src="{{ asset ('img/image3.jpg')}}" class="img-circle center-block introContentImage" alt="Responsive image" width="120" height="120">
         <h4>在建工程</h4>
         <hr class="introContentHr">
         <p class="hidden-xs">母是行神重花，園以。</p>
       </div>
       <div class="introContentBlock col-lg-3 col-md-3 col-sm-6 col-xs-6" data-aos="fade-up">
-        <img src="./img/image4.jpg" class="img-circle center-block introContentImage" alt="Responsive image" width="120" height="120">
+        <img src="{{ asset ('img/image4.jpg')}}" class="img-circle center-block introContentImage" alt="Responsive image" width="120" height="120">
         <h4>都市更新</h4>
         <hr class="introContentHr">
         <p class="hidden-xs">母是行神重花，園以。</p>
@@ -209,7 +209,7 @@
     <div class="row">
       <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" data-aos="fade-in">
         <div class="homeFootItem">
-        <img src="./img/footContent1.jpg" class="img-responsive center-block" height="560px" width="320px" alt="">
+        <img src="{{ asset ('img/footContent1.jpg') }}" class="img-responsive center-block" height="560px" width="320px" alt="">
           <div class="homeFootContentmask">
             <div class="homeFootContentTitle">
               <p>企業新聞</p>
@@ -224,7 +224,7 @@
       </div>
       <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" data-aos="fade-in">
         <div class="homeFootItem">
-        <img src="./img/footContent2.jpg" class="img-responsive center-block" height="560px" width="320px" alt="">
+        <img src="{{ asset ('img/footContent2.jpg') }}" class="img-responsive center-block" height="560px" width="320px" alt="">
           <div class="homeFootContentmask">
             <div class="homeFootContentTitle">
               <p>客戶服務</p>
@@ -239,7 +239,7 @@
       </div>
       <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" data-aos="fade-in">
         <div class="homeFootItem">
-        <img src="./img/footContent3.jpg" class="img-responsive center-block" height="560px" width="320px" alt="">
+        <img src="{{ asset ('img/footContent3.jpg') }}" class="img-responsive center-block" height="560px" width="320px" alt="">
           <div class="homeFootContentmask">
             <div class="homeFootContentTitle">
               <p>工程進度</p>
@@ -254,7 +254,7 @@
       </div>
       <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" data-aos="fade-in">
         <div class="homeFootItem">
-        <img src="./img/footContent4.jpg" class="img-responsive center-block" height="560px" width="320px" alt="">
+        <img src="{{ asset ('img/footContent4.jpg') }}" class="img-responsive center-block" height="560px" width="320px" alt="">
           <div class="homeFootContentmask">
             <div class="homeFootContentTitle">
               <p>聯絡我們</p>

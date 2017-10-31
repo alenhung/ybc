@@ -3,7 +3,7 @@
     <div class="row">
     	<div class="col-lg-6 col-md-5 footLogo">
 
-    		<a class="" href="#"><img class="img-responsive " src="./img/companyLogoFoot.png" alt=""></a>
+    		<a class="" href="#"><img class="img-responsive " src="{{ asset ('img/companyLogoFoot.png') }}" alt=""></a>
             <p>目福臺場，路維作名？的有史難上手自車念輕樂往的了馬感三車去畫像在的的小在熱性影須天</p>
     	</div>
     	<div class="col-lg-5 col-lg-offset-1 col-md-6 col-md-offset-1 footRightArea">

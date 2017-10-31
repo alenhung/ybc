@@ -1,7 +1,7 @@
 @extends('layouts.default')
 @section('title','公司簡介')
 @section('content')
-  <section id="contentHeader" style="background: url('./img/aboutBackground1.jpg')">
+  <section id="contentHeader" style="background: url({{ asset ('img/aboutBackground1.jpg') }})">
     @include('layouts._nav')
     <div class="container">
       <div class="row">
@@ -34,7 +34,7 @@
   <div class="container PT-2Column">
     <div class="row">
       <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 col-lg-offset-1 col-md-offset-1 col-sm-offset-1">
-        <img src="./img/about/about2.jpg" class="img-responsive img-rounded center-block" alt="Responsive image">
+        <img src="{{ asset ('img/about/about2.jpg') }}" class="img-responsive img-rounded center-block" alt="Responsive image">
       </div>
       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 adContentWord">
         <h2>員邦堅持以人為本，滿足需求的主動政策</h2>
@@ -52,7 +52,7 @@
   <div class="container PT-2Column">
     <div class="row">
       <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 col-lg-offset-1 col-md-offset-1 col-sm-offset-1">
-        <img src="./img/about/about3.jpg" class="img-responsive img-rounded center-block" alt="Responsive image">
+        <img src="{{ asset ('img/about/about3.jpg') }}" class="img-responsive img-rounded center-block" alt="Responsive image">
       </div>
       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 adContentWord">
         <h2>Page2-經營理念</h2>
@@ -72,7 +72,7 @@
   <div class="container PT-2Column">
     <div class="row">
       <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 col-lg-offset-1 col-md-offset-1 col-sm-offset-1">
-        <img src="./img/about/about4.jpg" class="img-responsive img-rounded center-block" alt="Responsive image">
+        <img src="{{ asset ('img/about/about4.jpg') }}" class="img-responsive img-rounded center-block" alt="Responsive image">
       </div>
       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 adContentWord">
         <h2>Page3-未來願景</h2>
@@ -91,7 +91,7 @@
   <div class="container PT-2Column">
     <div class="row">
       <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 col-lg-offset-1 col-md-offset-1 col-sm-offset-1">
-        <img src="./img/about/about2.jpg" class="img-responsive img-rounded center-block" alt="Responsive image">
+        <img src="{{ asset ('img/about/about2.jpg') }}" class="img-responsive img-rounded center-block" alt="Responsive image">
       </div>
       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 adContentWord">
         <h2>Page4-關係企業</h2>
