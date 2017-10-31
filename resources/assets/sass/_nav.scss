@@ -1,0 +1,84 @@
+$BodyBackgroundColor: #efefef;
+$NavFontColor: #fff;
+$navBackgroundColor:  rgba(0, 0, 0, 0.4);
+/*//$navBackgroundColor:  rgba(255, 126, 0, 0.4);*/
+$navBackgroundBorderColor:  rgba(255, 255, 255, 0.2);
+$navBackgroundColor-Scrolling:  rgba(0, 0, 0, 0.8);
+$navBackgroundBorderColor-Scrolling:  rgba(255, 255, 255, 0.4);
+/*NavBar*/
+nav{
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 20;
+}
+.navbar-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 20;
+}
+
+/* Flip around the padding for proper display in narrow viewports */
+.navbar-wrapper > .container {
+  padding-right: 0;
+  padding-left: 0;
+}
+.navbar-wrapper .navbar {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.navbar-wrapper .navbar .container {
+  width: auto;
+}
+.navbar{
+  text-shadow: rgba(0, 0, 0, 0.2) 1px 1px 2px;
+}
+.navbar-default{
+	background-color: $navBackgroundColor;
+	border-color: $navBackgroundBorderColor;
+}
+.navbar-default .navbar-brand{
+	color: $NavFontColor;
+}
+.navbar-default .navbar-nav>li>a{
+	color: $NavFontColor;
+}
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover{
+	color: white;
+	border-bottom: 4px solid $ThemeMainColor;
+	padding-bottom: 11px; //total-15px
+}
+.navbar-brand {
+  padding: 0px;
+}
+.navbar-brand>img {
+  height: 100%;
+  padding: 5px;
+  width: auto;
+}
+/*End NavBar End*/
+
+/*JS Scroll class*/
+.navOnTop{
+  background-color: $navBackgroundColor;
+  border-color: $navBackgroundBorderColor;
+}
+.nacScrolling{
+  background-color: $navBackgroundColor-Scrolling;
+  border-color: $navBackgroundBorderColor-Scrolling;
+}
+.nav-tabs{
+  li{
+    padding-left: 10px;
+    padding-right: 10px;
+    a{
+      color: $footertWordColor;
+      :hover,:active,:visited,:focus{
+        color: $footertWordColor;
+      }
+    }
+  }
+}

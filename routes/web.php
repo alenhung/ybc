@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'StaticPagesController@home')->name('home');
+Route::get('/about', 'StaticPagesController@about')->name('about');
+Route::get('/works', 'WorksPagesController@works')->name('works');
+Route::get('/works_Introduction', 'WorksPagesController@itemIntroduction')->name('itemIntroduction');
+Route::get('/contact', 'ServicePagesController@contact')->name('contact');
