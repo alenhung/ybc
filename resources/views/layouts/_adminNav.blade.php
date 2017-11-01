@@ -57,6 +57,10 @@
                         {{ Auth::user()->name }} <span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu">
+                      <li><a href="{{route('users.index')}}">使用者管理</a></li>
+                      {{-- 分隔線 --}}
+                      <li role="separator" class="divider"></li>
+                      {{-- 次標題 --}}
                         <li>
                             <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                 登出
