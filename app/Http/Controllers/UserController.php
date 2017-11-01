@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use DB;
 
 class UserController extends Controller
 {
@@ -14,7 +15,7 @@ class UserController extends Controller
      */
     public function index()
     {
-      $users = User::orderBy('id', 'desc')->paginate(2);
+      $users = User::orderBy('id', 'desc')->paginate(10);
       return view('manage.users.index')->withUsers($users);
     }
 
@@ -25,7 +26,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        return view('manage.users.create');
     }
 
     /**
@@ -36,7 +37,27 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      $this->validate($request,[
+        'name' => 'required|max:255',
+        'email' => 'required|email|unique:users',
+        'password' => 'required'
+      ]);
+
+      $user = new User();
+      $user->name = $request->name;
+      $user->email = $request->email;
+      $user->password = $request->password;
+      $user->save();
+
+      if ($user->save()) {
+        return redirect()->route('users.show',$user->id);
+      }else{
+        Session::flash('danger',"OPPS! 出現點問題！並無法新增使用者。");
+        return redirect()->route('users.create');
+      }
+
+
+
     }
 
     /**
@@ -47,7 +68,8 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        //
+      $user = User::findOrFail($id);
+      return view('manage.users.show')->withUser($user);
     }
 
     /**
@@ -58,7 +80,8 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+      $user = User::findOrFail($id);
+      return view('manage.users.edit')->withUser($user);
     }
 
     /**
