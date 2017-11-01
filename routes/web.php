@@ -19,4 +19,9 @@ Route::get('/contact', 'ServicePagesController@contact')->name('contact');
 
 Auth::routes();
 
+Route::prefix('manage')->middleware('role:superadministrator')->group(function(){
+  Route::get('/','ManageController@index');
+  Route::get('/dashboard','ManageController@dashboard')->name('manage.dashboard');
+});
+
 Route::get('/Site_Admin', 'SiteAdminController@SiteAdmin')->name('SiteAdmin');
