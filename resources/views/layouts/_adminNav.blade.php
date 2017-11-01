@@ -11,26 +11,63 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">管理介面</a></li>
-            <li><a href="#about">工程作品</a></li>
-            <li><a href="#contact">在建工程</a></li>
+            <li class="active"><a href="#">管理首頁</a></li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">企業新聞 <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
+                <li><a href="#">企業新聞清單</a></li>
+                {{-- 分隔線 --}}
                 <li role="separator" class="divider"></li>
-                <li class="dropdown-header">Nav header</li>
-                <li><a href="#">Separated link</a></li>
-                <li><a href="#">One more separated link</a></li>
+                {{-- 次標題 --}}
+                <li class="dropdown-header">內容編輯項目</li>
+                <li><a href="#">新增企業新聞</a></li>
               </ul>
             </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">作品介紹 <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">作品清單</a></li>
+                {{-- 分隔線 --}}
+                <li role="separator" class="divider"></li>
+                {{-- 次標題 --}}
+                <li class="dropdown-header">內容編輯項目</li>
+                <li><a href="#">新增作品</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">在建工程 <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">在建工程清單</a></li>
+                {{-- 分隔線 --}}
+                <li role="separator" class="divider"></li>
+                {{-- 次標題 --}}
+                <li class="dropdown-header">內容編輯項目</li>
+                <li><a href="#">新增在建工程</a></li>
+              </ul>
+            </li>
+
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="../navbar/">Default</a></li>
-            <li><a href="../navbar-static-top/">Static top</a></li>
-            <li class="active"><a href="./">Fixed top <span class="sr-only">(current)</span></a></li>
+            @guest
+                <li><a href="{{ route('login') }}">Login</a></li>
+                <li><a href="{{ route('register') }}">Register</a></li>
+            @else
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
+                        {{ Auth::user()->name }} <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                登出
+                            </a>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                {{ csrf_field() }}
+                            </form>
+                        </li>
+                    </ul>
+                </li>
+            @endguest
           </ul>
         </div><!--/.nav-collapse -->
       </div>
