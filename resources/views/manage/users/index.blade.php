@@ -3,17 +3,15 @@
 @section('content')
   <div class="container">
     <div class="row">
-      <div class="col-lg-12 col-md-12 col-sm-12 col-xs 12">
-        <h1>使用者管理介面</h1>
+      <div class="col-lg-2 col-md-2 col-sm-12 com-xs-12">
+        @include('layouts.adminUserNav')
       </div>
-      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-        <a href="{{route('users.create')}}" class="btn">新增使用者</a>
-      </div>
-      <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
-        <div class="panel panel-default">
-          <div class="panel-heading">管理者清單</div>
-          <div class="panel-body">
-            <table class="table table-striped table-responsive">
+      <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+        <div class="page-header">
+          <h3>管理者清單</h3>
+        </div>
+        <div class="well well-lg">
+            <table class="table table-responsive">
               <thead>
                 <tr>
                   <th>編號</th>
@@ -30,14 +28,13 @@
                   <td>{{$user->name}}</td>
                   <td>{{$user->email}}</td>
                   <td>{{$user->created_at->toformattedDateString()}}</td>
-                  <td><a class="btn btn-primary" role="button" href="{{route('users.edit',$user->id)}}">修改</a></td>
+                  <td><a class="btn btn-info btn-sm" role="button" href="{{route('users.edit',$user->id)}}">編輯</a></td>
                 </tr>
               @endforeach
               </tbody>
             </table>
-          </div>
-        </div>
         {{$users->links()}}
+        </div>
       </div>
     </div>
   </div>
