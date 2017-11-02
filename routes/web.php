@@ -23,6 +23,8 @@ Route::prefix('manage')->middleware('role:superadministrator')->group(function()
   Route::get('/','ManageController@index');
   Route::get('/dashboard','ManageController@dashboard')->name('manage.dashboard');
   Route::resource('/users','UserController');
+  Route::resource('/permissions','PermissionController',['except => destory']);
+  Route::resource('/roles','RoleController',['except => destory']);
 });
 
 Route::get('/Site_Admin', 'SiteAdminController@SiteAdmin')->name('SiteAdmin');
