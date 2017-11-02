@@ -7,6 +7,7 @@
         <h1>{{$user->name}}</h1>
       </div>
       <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+        <a href="{{route('users.create')}}" class="btn">新增使用者</a>
         <a href="{{route('users.edit', $user->id)}}" class="btn">修改會員資料</a>
       </div>
       <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">

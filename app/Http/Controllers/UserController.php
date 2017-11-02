@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
 use DB;
+use Session;
+use Hash;
 
 class UserController extends Controller
 {
@@ -46,13 +48,13 @@ class UserController extends Controller
       $user = new User();
       $user->name = $request->name;
       $user->email = $request->email;
-      $user->password = $request->password;
+      $user->password = Hash::make($request->password);
       $user->save();
 
       if ($user->save()) {
         return redirect()->route('users.show',$user->id);
       }else{
-        Session::flash('danger',"OPPS! 出現點問題！並無法新增使用者。");
+        Session::flash('danger','OPPS! 出現點問題！並無法新增使用者。');
         return redirect()->route('users.create');
       }
 
@@ -93,7 +95,24 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+      $this->validate($request,[
+        'name' => 'required|max:255',
+        'email' => 'required|email|unique:users,email,'.$id,
+        'password' => 'required'
+      ]);
+
+      $user = User::findOrFail($id);
+      $user->name = $request->name;
+      $user->email = $request->email;
+      $user->password = Hash::make($request->password);
+      $user->save();
+
+      if ($user->save()) {
+        return redirect()->route('users.show',$user->id);
+      }else{
+        Session::flash('danger','OPPS! 出現點問題！無法修改使用者。');
+        return redirect()->route('users.edit');
+      }
     }
 
     /**
