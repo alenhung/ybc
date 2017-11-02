@@ -8,9 +8,10 @@
       </div>
       <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
         <div class="page-header">
-          <h3>新增使用者 - {{$user->name}}</h3>
+          <h3>新增管理者</h3>
         </div>
-        <div class="well well-lg">
+        <div class="panel panel-default">
+          <div class="panel-body">
           <div class="form-horizontal">
           <div class="form-group">
               <label for="name" class="col-md-4 control-label">使用者名稱</label>
@@ -24,9 +25,13 @@
                   <input id="email" type="email" class="form-control"  placeholder="{{$user->email}}" readonly>
               </div>
           </div>
-          <a href="{{route('users.index')}}" class="btn btn-primary center-block">返回管理者清單</a>
+          <div class="form-group text-center">
+            <a href="{{route('users.index')}}" class="btn btn-primary">返回管理者清單</a>
+            </div>
         </div>
         </div>
+        </div>
+
       </div>
     </div>
   </div>

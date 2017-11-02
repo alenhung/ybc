@@ -3,7 +3,16 @@ body {
   background: whitesomke;
 }
 
-.manageArea {
-  background: #ccc;
+.content_block {
+  background: white;
+  border: 1px solid #EFEFEF;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 1px;
+  box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 1px;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.well-next {
+  margin-top: 20px;
 }
 

@@ -10,7 +10,8 @@
         <div class="page-header">
           <h3>建立管理者</h3>
         </div>
-        <div class="well well-lg">
+        <div class="panel panel-default">
+          <div class="panel-body">
           <form class="form-horizontal" action="{{route('users.store')}}" method="POST">
               {{ csrf_field() }}
               <div class="form-group">
@@ -37,6 +38,7 @@
                   </div>
               </div>
           </form>
+          </div>
         </div>
       </div>
     </div>

@@ -10,7 +10,8 @@
         <div class="page-header">
           <h3>管理者清單</h3>
         </div>
-        <div class="well well-lg">
+        <div class="panel panel-default">
+          <div class="panel-body">
             <table class="table table-responsive">
               <thead>
                 <tr>
@@ -33,8 +34,9 @@
               @endforeach
               </tbody>
             </table>
-        {{$users->links()}}
+          </div>
         </div>
+        {{$users->links()}}
       </div>
     </div>
   </div>
