@@ -16,13 +16,26 @@
           <div class="form-group">
               <label for="name" class="col-md-4 control-label">使用者名稱</label>
               <div class="col-md-6">
-                  <input id="name" type="text" class="form-control" placeholder="{{$user->name}}" readonly>
+                  {{-- <input id="name" type="text" class="form-control" placeholder="{{$user->name}}" readonly> --}}
+                  <pre>{{$user->name}}</pre>
               </div>
           </div>
           <div class="form-group">
               <label for="email" class="col-md-4 control-label">電子信箱</label>
               <div class="col-md-6">
-                  <input id="email" type="email" class="form-control"  placeholder="{{$user->email}}" readonly>
+                  {{-- <input id="email" type="email" class="form-control"  placeholder="{{$user->email}}" readonly> --}}
+                  <pre>{{$user->email}}</pre>
+              </div>
+          </div>
+          <div class="form-group">
+              <label for="role" class="col-md-4 control-label">角色權限</label>
+              <div class="col-md-6">
+                @forelse ($user->roles as $role)
+                  <pre>{{$role->display_name}} ({{$role->description}})</pre>
+                @empty
+                  <pre>並未設定任何權限</pre>
+                
+                @endforelse
               </div>
           </div>
           <div class="form-group text-center">

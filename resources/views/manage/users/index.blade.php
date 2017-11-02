@@ -29,7 +29,7 @@
                   <td>{{$user->name}}</td>
                   <td>{{$user->email}}</td>
                   <td>{{$user->created_at->toformattedDateString()}}</td>
-                  <td><a class="btn btn-info btn-sm" role="button" href="{{route('users.edit',$user->id)}}">編輯</a></td>
+                  <td><a class="btn btn-default btn-sm" role="button" href="{{route('users.show',$user->id)}}">檢視</a><a class="btn btn-info btn-sm" role="button" href="{{route('users.edit',$user->id)}}">編輯</a></td>
                 </tr>
               @endforeach
               </tbody>
